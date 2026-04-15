@@ -1,0 +1,20 @@
+{
+  "name": "@pipeworx/mcp-dockerhub",
+  "version": "0.1.0",
+  "description": "Docker Hub MCP — wraps the Docker Hub v2 API (free, no auth required for public data)",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "dockerhub"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pipeworx-io/mcp-dockerhub"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}
