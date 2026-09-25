@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/dockerhub",
   "title": "Dockerhub",
   "description": "Docker Hub MCP — wraps the Docker Hub v2 API (free, no auth required for public data)",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "websiteUrl": "https://pipeworx.io/packs/dockerhub",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-dockerhub",
