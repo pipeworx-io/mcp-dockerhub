@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-dockerhub",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Docker Hub MCP — wraps the Docker Hub v2 API (free, no auth required for public data)",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-dockerhub": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "dockerhub"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-dockerhub.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/dockerhub",
   "pipeworx": {
-    "sourceHash": "v1-8f7e84c9e0de0112ca2815960c36123c612e2b22d070ec78ed197a94d024a457",
-    "sourceCommit": "29fb434ca65fe0f61191f19c3502f583f5fb99d7"
+    "mode": "gateway",
+    "slug": "dockerhub",
+    "gatewaySlug": "dockerhub",
+    "sourceHash": "v1-f107924ad78ee0ccd3281a631b558df37803b42656d1e013760eadb388a18f16",
+    "sourceCommit": "0b3faaa4d85299a961dd86dea75a0f0e1dad280c"
   }
 }

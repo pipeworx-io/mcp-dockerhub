@@ -1,0 +1,94 @@
+[
+  {
+    "name": "search_images",
+    "description": "Search Docker Hub for container images by keyword. Returns repository name, description, pull count, star count, and official status. Use when finding images for deployment.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Search query (e.g., \"nginx\", \"postgres\")"
+        },
+        "limit": {
+          "type": "number",
+          "description": "Number of results to return (default 10, max 100)"
+        }
+      },
+      "required": [
+        "query"
+      ]
+    }
+  },
+  {
+    "name": "get_image",
+    "description": "Get detailed metadata for a Docker Hub repository: description, pull count, stars, last updated date, and official status. Use before pulling an image to verify quality and currency.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "namespace": {
+          "type": "string",
+          "description": "Repository namespace — use \"library\" for official images (e.g., \"library\", \"bitnami\")"
+        },
+        "name": {
+          "type": "string",
+          "description": "Repository name (e.g., \"nginx\", \"redis\")"
+        }
+      },
+      "required": [
+        "namespace",
+        "name"
+      ]
+    }
+  },
+  {
+    "name": "get_tags",
+    "description": "List available tags for a Docker image sorted by recency. Returns tag name, digest, size, and push date. Use to find and select specific versions to pull.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "namespace": {
+          "type": "string",
+          "description": "Repository namespace (use \"library\" for official images)"
+        },
+        "name": {
+          "type": "string",
+          "description": "Repository name"
+        },
+        "limit": {
+          "type": "number",
+          "description": "Number of tags to return (default 20, max 100)"
+        }
+      },
+      "required": [
+        "namespace",
+        "name"
+      ]
+    }
+  },
+  {
+    "name": "get_tag_details",
+    "description": "Get full details for a SPECIFIC image tag, including every platform/architecture it supports (os/arch/variant), per-platform digests and sizes, the multi-arch manifest digest, and push date. PREFER for \"does <image>:<tag> have an arm64 build\", \"what platforms does <image>:<tag> support\", \"the digest/size of <image>:<tag>\", multi-arch verification.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "namespace": {
+          "type": "string",
+          "description": "Repository namespace (use \"library\" for official images, e.g. \"library\", \"bitnami\")."
+        },
+        "name": {
+          "type": "string",
+          "description": "Repository name (e.g. \"nginx\", \"redis\")."
+        },
+        "tag": {
+          "type": "string",
+          "description": "Tag name (e.g. \"latest\", \"1.27\", \"7.2-alpine\")."
+        }
+      },
+      "required": [
+        "namespace",
+        "name",
+        "tag"
+      ]
+    }
+  }
+]
