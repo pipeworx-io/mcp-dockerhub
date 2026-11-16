@@ -1,7 +1,7 @@
 {
   "name": "@pipeworx/mcp-dockerhub",
-  "version": "0.2.1",
-  "description": "Docker Hub MCP — wraps the Docker Hub v2 API (free, no auth required for public data)",
+  "version": "0.2.2",
+  "description": "Unofficial Docker Hub MCP — wraps the Docker Hub v2 API (free, no auth required for public data)",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "dockerhub",
     "gatewaySlug": "dockerhub",
-    "sourceHash": "v1-63fc5d5aacb038fca7fd64f7105a6776150a2949b4b4dc889546edb0f6101e51",
-    "sourceCommit": "e707a4bb6209f432984c0a83bf64b3138130db89"
+    "sourceHash": "v1-3e5a5b1d65dfce44ac2e01b029e538a4c512901627d900f000d7a4e08f0412e0",
+    "sourceCommit": "874331b0c46b151f9264bd14840631427a7721c1"
   }
 }

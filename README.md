@@ -1,15 +1,15 @@
 # mcp-dockerhub
 
-Docker Hub MCP — wraps the Docker Hub v2 API (free, no auth required for public data)
+Unofficial Docker Hub MCP — wraps the Docker Hub v2 API (free, no auth required for public data)
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1863+ live data sources. This is an independent, unofficial integration — not affiliated with, endorsed by, or published by the upstream provider.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 2006+ live data sources. This is an independent, unofficial integration — not affiliated with, endorsed by, or published by the upstream provider.
 
 ## Tools
 
 | Tool | Description |
 |------|-------------|
-| `search_images` | Search Docker Hub for container images by keyword. Returns repository name, description, pull count, star count, and official status. Use when finding images for deployment. |
-| `get_image` | Get detailed metadata for a Docker Hub repository: description, pull count, stars, last updated date, and official status. Use before pulling an image to verify quality and currency. |
+| `dockerhub_search_images` | Search Docker Hub for container images by keyword. Returns repository name, description, pull count, star count, and official status. Use when finding images for deployment. |
+| `dockerhub_get_image` | Get detailed metadata for a Docker Hub repository: description, pull count, stars, last updated date, and official status. Use before pulling an image to verify quality and currency. |
 | `get_tags` | List available tags for a Docker image sorted by recency. Returns tag name, digest, size, and push date. Use to find and select specific versions to pull. |
 | `get_tag_details` | Get full details for a SPECIFIC image tag, including every platform/architecture it supports (os/arch/variant), per-platform digests and sizes, the multi-arch manifest digest, and push date. PREFER for "does <image>:<tag> have an arm64 build", "what platforms does <image>:<tag> support", "the digest/size of <image>:<tag>", multi-arch verification. |
 
@@ -57,7 +57,7 @@ directly, instead of just this one's:
 }
 ```
 
-Both URLs reach the same gateway and the same 1863+ data sources. The
+Both URLs reach the same gateway and the same 2006+ data sources. The
 only difference is which pack's tools are listed **directly**; `ask_pipeworx`
 reaches all of them from either one.
 

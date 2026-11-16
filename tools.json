@@ -1,6 +1,6 @@
 [
   {
-    "name": "search_images",
+    "name": "dockerhub_search_images",
     "description": "Search Docker Hub for container images by keyword. Returns repository name, description, pull count, star count, and official status. Use when finding images for deployment.",
     "inputSchema": {
       "type": "object",
@@ -20,7 +20,7 @@
     }
   },
   {
-    "name": "get_image",
+    "name": "dockerhub_get_image",
     "description": "Get detailed metadata for a Docker Hub repository: description, pull count, stars, last updated date, and official status. Use before pulling an image to verify quality and currency.",
     "inputSchema": {
       "type": "object",
